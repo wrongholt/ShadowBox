@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Shadow Box of Rongholt Family</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="./javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+    this.randomtip = function(){
+
+      var pause = 5000; // define the pause for each tip (in milliseconds) 
+      var length = $("#vets li").length; 
+      var temp = -1;		
+
+      this.getRan = function(){
+        // get the random number
+        var ran = Math.floor(Math.random()*length) + 1;
+        return ran;
+      };
+      this.show = function(){
+        var ran = getRan();
+        // to avoid repeating
+        while (ran == temp){
+          ran = getRan();
+        }; 
+        temp = ran;
+        $("#vets li").hide();	
+        $("#vets li:nth-child(" + ran + ")").fadeIn("fast");		
+      };
+      
+      show(); setInterval(show,pause);
+      
+    };
+
+    $(document).ready(function(){	
+      randomtip();
+    });
+
+    </script>
+  </head>
+  <body>
+    <div id="box">
+      <header>
+        <h1>Rongholt Shadow Box</h1>
+      </header>
+      <nav id="menu_icon">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="civil.html">Civil War</a></li>
+          <li><a href="WWII.html">WWII</a></li>
+          <li><a href="vietnam.html">Vietnam</a></li>
+          <li><a href="middleeast.html">Middle East</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="main1">
+          <h1>Shadow Box of Rongholt Family</h1>
+          <p>This is for all those who faught for the United States from the extended Rongholt Family.  From the Civil War to the wars in the Middle East.</p>
+          <h2>US Military Branches</h2>
+          <p>This is to show respect to all military, please enjoy the songs of the branches and links to each of their websites by clicking on the flag.          <h3>Marines</h3>
+          <a href="http://www.marines.mil/" target="_blank"><span class="image"><img src="./images/usmc.png" alt="USMC" height="150" width="300"></span></a>
+          <p><a href="./music/usmc.mp3">United States Marine Corps Hymn</a></p>
+          <h3>Army</h3>
+          <a href="https://www.army.mil/" target="_blank"><span class="image"><img src="./images/army.png" alt="Army" height="150" width="300"></span></a>
+          <p><a href="./music/army.mp3">The Army Goes Rolling Along</a></p>
+          <h3>Air Force</h3>
+          <a href="http://www.af.mil/" target="_blank"><span class="image"><img src="./images/af.png" alt="Air Force" height="150" width="300"></span></a>         
+          <p><a href="./music/airforce.mp3">The U.S. Air Force</a></p>
+          <h3>Navy</h3>
+          <a href="http://www.navy.mil/" target="_blank"><span class="image"><img src="./images/navy.png" alt="Navy" height="150" width="300"></span></a>
+          <p><a href="./music/anchors.mp3">Anchors Aweigh</a></p>
+                  
+        </section>
+        <section id="main2">
+          <article>
+            <h2>Veteran Biography's</h2>
+            <ul id="vets">
+              <li><h3>Will Rongholt</h3>
+              <a href="./middleeast.html#will"><img src="./images/will.jpg" alt="Will Rongholt" height="150" width="150"></a></li>
+              <li><h3>Sever Severson</h3>
+              <a href="./civil.html#sever"><img src="./images/sever.jpg" alt="Sever Severson" height="150" width="150"></a></li>
+              <li><h3>Loyal Rongholt</h3>
+              <a href="./vietnam.html#loyal"><img src="./images/loyal.jpg" alt="Loyal Rongholt" height="180" width="150"></a></li>
+              <li><h3>Arthur West</h3>
+              <a href="./WWII.html#west"><img src="./images/west.jpg" alt="Arthor West" height="150" width="150"></a></li>
+              <li><h3>William Rongholt</h3>
+              <a href="./WWII.html#william"><img src="./images/william.jpg" alt="William Rongholt" height="150" width="150"></a></li>
+            </ul>
+          </article>
+        </section>
+
+      </main>
+      
+      <footer>
+        <small>Copyright &copy; Rongholt</small><br>
+        <a href="mailto:will@rongholt.com">will@rongholt.com</a>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Shadow Box of Rongholt Family</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="box">
+    <header>
+      <h1>Rongholt Shadow Box</h1>
+    </header>
+    <nav id="menu_icon">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="civil.html">Civil War</a></li>
+        <li><a href="WWII.html">WWII</a></li>
+        <li><a href="vietnam.html">Vietnam</a></li>
+        <li><a href="middleeast.html">Middle East</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main id="main3">
+      <h2>Contact</h2>
+      <p>All fields with an astrisk (*) are required.</p>
+      <form method="post" action="rongholt.com/contact.php">
+        <fieldset>
+          <legend>About you</legend>
+          <label for="first_name">* First Name</label>
+          <input placeholder="Sam" required id="first_name" type="text" name="first_name">
+          <label for="last_name">* Last Name</label>
+          <input placeholder="Johnson" required id="last_name" type="text" name="last_name">      
+          <label for="email">* Email</label>
+          <input placeholder="email@email.com" required id="email" type="email" name="email">            
+          <label for="reason">* Reason</label>
+          <select id="reason" name="reason">
+            <option selected value="inquiry">General Question</option>
+            <option selected value="question">Want a Shadow Box for you?</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Terms of Service</legend>
+          <input id="terms" required type="checkbox" name="terms" value="yes">
+          <label id="checkbox" for="terms">
+          *I agree that submitting this form allows William Rongholt to use your contact information in any way.
+          </label>
+        </fieldset>
+        <label for="the_message">* Message</label>
+        <textarea required id="the_message" name="the_message"></textarea>
+        
+        <input type="submit" value="Send Message">
+      </form>
+      <section>
+        
+        <p>Send email to us at <a href="mailto:info@rongholt.com">info@rongholt.com</a></p>
+        
+      </section>
+      
+    </main>
+      
+    <footer>
+      <small>Copyright &copy; Rongholt</small><br>
+      <a href="mailto:will@rongholt.com">will@rongholt.com</a>
+    </footer>
+    </div>
+  </body>
+</html>
